@@ -13,7 +13,8 @@ class CellphoneController extends Controller
      */
     public function index()
     {
-        return view('cellphones.index');
+        $cp = Cellphone::all();
+        return view('cellphones.index',['cell'=>$cp]);
     }
 
     /**
@@ -36,6 +37,7 @@ class CellphoneController extends Controller
         ]);
         // $cellphone = DB::table('cellphones')->insert($data);
         $entry = Cellphone::create($data);
+        return redirect(route('cellphones.index'));
     }
 
     /**git
@@ -51,7 +53,8 @@ class CellphoneController extends Controller
      */
     public function edit(Cellphone $cellphone)
     {
-        //
+        // dd($cellphone->all());
+        return view('cellphones.edit',['data'=>$cellphone]);
     }
 
     /**

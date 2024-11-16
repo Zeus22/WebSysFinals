@@ -16,7 +16,6 @@
             <input type="text" name ="manufacturer" placeholder="who is the manufacturer?">
             <input type="text" name ="price" placeholder="price">
             <button type="submit">Sign in</button>
-        </div>
         </form>
     </div>
 </body>
